@@ -75,11 +75,11 @@ def with_subservice_overlay(
             nodenorm,
         )(
             with_function_overlay(
-                "https://automat.renci.org/robokopkg/1.1/meta_knowledge_graph",
+                "https://automat.renci.org/robokopkg/1.2/meta_knowledge_graph",
                 meta_kg,
             )(
                 with_function_overlay(
-                    "https://automat.renci.org/robokopkg/1.1/query",
+                    "https://automat.renci.org/robokopkg/1.2/query",
                     lookup,
                 )(
                     with_function_overlay(
