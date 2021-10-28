@@ -33,9 +33,13 @@ openapi_kwargs = dict(
     trapi_operations=["lookup"],
 )
 OPENAPI_SERVER_URL = os.getenv("OPENAPI_SERVER_URL")
+OPENAPI_SERVER_MATURITY = os.getenv("OPENAPI_SERVER_MATURITY", "development")
 if OPENAPI_SERVER_URL:
     openapi_kwargs["servers"] = [
-        {"url": OPENAPI_SERVER_URL}
+        {
+            "url": OPENAPI_SERVER_URL,
+            "x-maturity": OPENAPI_SERVER_MATURITY,
+        },
     ]
 APP = TRAPI(
     **openapi_kwargs,
